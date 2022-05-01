@@ -37,28 +37,16 @@ $settingsJson | Out-File $settingsPath -Encoding utf8
 #Install New apps
 Write-Output "Installing Apps"
 $apps = @(
-    @{name = "Docker.DockerDesktop" }, 
     @{name = "Microsoft.PowerShell" }, 
     @{name = "Microsoft.VisualStudioCode" }, 
-    @{name = "dbeaver.dbeaver" }, 
-    @{name = "Microsoft.PowerToys" },
-    @{name = "Git.Git" }, 
-    @{name = "Docker.DockerDesktop" },
-    @{name = "TimKosse.FileZillaClient" },
-    @{name = "LogMeIn.LastPass" },
-    @{name = "Dropbox.Dropbox" },
     @{name = "Google.Chrome" },
     @{name = "notable.notable" },
-    @{name = "Notepad++.Notepad++" },
-    @{name = "DominikReichl.KeePass" },
     @{name = "Spotify.Spotify" },
-    @{name = "Oracle.JavaRuntimeEnvironment" },
-    @{name = "Valve.Steam" },
     @{name = "Postman.Postman" },
     @{name = "7zip.7zip" },
-    @{name = "PuTTY.PuTTY" },
-    @{name = "flux.flux" }
-    @{name = "Apple.iTunes" }
+    @{name = "flux.flux" },
+    @{name = "SlackTechnologies.Slack" },
+    @{name = "Discord.Discord" }
 );
 Foreach ($app in $apps) {
     $listApp = winget list --exact -q $app.name
