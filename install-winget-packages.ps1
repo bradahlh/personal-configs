@@ -46,7 +46,11 @@ $apps = @(
     @{name = "7zip.7zip" },
     @{name = "flux.flux" },
     @{name = "SlackTechnologies.Slack" },
-    @{name = "Discord.Discord" }
+    @{name = "Discord.Discord" },
+    @{name = "Lexikos.AutoHotkey" },
+    @{name = "AgileBits.1Password" },
+    @{name = "Amazon.Kindle" }
+
 );
 Foreach ($app in $apps) {
     $listApp = winget list --exact -q $app.name
