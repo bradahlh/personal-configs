@@ -17,3 +17,18 @@ Return
 !Right::
 Send, {End}
 Return
+
+; When pressing left alt+c, print two backticks and move cursor inside of them
+!c::
+Send {`` 2}
+Send {Left}
+Return
+
+; When pressing left alt+shift+c, print three backticks+blank line+three backticks, and move cursor to blank line
+<+!c::
+Send {`` 4}
+Send {BackSpace}
+Send {Enter}
+Send {Enter}
+Send {Up}
+Return
