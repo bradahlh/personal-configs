@@ -18,6 +18,16 @@ Return
 Send, {End}
 Return
 
+; Alt+Shift+Left arrow => Mark everything until beginning of line
+!+Left::
+Send, {Shift Down}{Home Down}
+Return
+
+; Alt+Shift+Right arrow => Mark everything until end of line
+!+Right::
+Send, {Shift Down}{End Down}
+Return
+
 ; When pressing left alt+c, print two backticks and move cursor inside of them
 !c::
 Send {`` 2}
